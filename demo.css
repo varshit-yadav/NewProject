@@ -1,19 +1,17 @@
 .header{
     text-align: center;
     background-color: rgb(104, 33, 170);
-    margin: auto;
-    padding: 0px 0px 20px 0px;
+    padding:10px;
 }
 .header>div{
     text-align:center;
-    padding-top: 10px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .footer{
     text-align: center;
     background-color: rgb(177, 109, 240);
-    margin-top: 260px;
+    margin-top: 280px;
     padding-bottom: 30px;
 }
 .footer>p{
@@ -25,12 +23,51 @@
     display: flex;
     background: rgb(193, 147, 236);
     text-align: center;
-    padding-left: 330px;
     font-size: 20px;
 }
 .menu>div{
     text-align: center;
-	padding:20px;
+	float: left;
+    padding: 15px;
 }
+.menu a:hover {
+    background-color:rgb(104, 33, 170);
+    color: black;
+  }
+  @media screen and (max-width:600px) {
+    .menu{
+      width: 100%;
+    }
+  }
+.column {
+    float: left;
+    width: 30%;
+    padding: 15px;
+  }
+.row:after {
+    content: "";
+    display: flex;
+    clear: both;
+  }
+@media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
 
+
+.form{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.button{
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+button:hover{
+    background-color:rgb(104, 33, 170);
+}
 /* todo use pseduo class for body responsive*/
