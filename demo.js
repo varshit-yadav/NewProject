@@ -45,14 +45,15 @@ function CalculateEMI(p1,r1,n1,choice){
                     break;
         case "Car": if(parseInt(n1)>7){ alert("Duration should be less then 7 for Car Loan"); return ;}
                     break; 
-         case "Car": if(parseInt(n1)>5) {alert("Duration should be less then 5 for Personal Loan");return ;}
+         case "Personal": if(parseInt(n1)>5) {alert("Duration should be less then 5 for Personal Loan");return ;}
                     break;                         
    }
    var p=parseInt(p1);
    var n=parseInt(n1);
    var r=parseInt(r1);
    n=n*12;
-   var emi= p*r*(1+r)*n/((1 + r)*n - 1);
+   r=r/(100*12);
+   var emi=p*r*Math.pow((1+r),n)/(Math.pow((1+r),n)-1);
    document.f1.EMI.value= emi;
    return;
 }
